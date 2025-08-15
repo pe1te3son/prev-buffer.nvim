@@ -39,7 +39,7 @@ return {
   "pe1te3son/prev-buffer.nvim",
   version = "*", -- Use latest stable release
   opts = {
-    delete_key = "<leader>bd",  -- Custom delete buffer keymap
+    delete_key = "<leader>bd",  -- Custom delete buffer keymap;
     switch_key = "<leader><Tab>", -- Custom switch buffer keymap
   },
 }
@@ -56,4 +56,3 @@ The plugin exposes the following functions:
 ## License
 
 MIT
-
