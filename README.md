@@ -15,7 +15,8 @@ A simple Neovim plugin to switch to previous buffer with tab inspired by Spacema
 
 ```lua
 return {
-  "pe1te3son/prev-manager.nvim",
+  "pe1te3son/prev-buffer.nvim",
+  version = "*", -- Use latest stable release
   keys = {
     { "<leader>bd", desc = "Delete current buffer and switch to previous" },
     { "<leader><Tab>", desc = "Switch to last previous" },
@@ -35,7 +36,8 @@ return {
 
 ```lua
 return {
-  "pe1te3son/prev-manager.nvim",
+  "pe1te3son/prev-buffer.nvim",
+  version = "*", -- Use latest stable release
   opts = {
     delete_key = "<leader>bd",  -- Custom delete buffer keymap
     switch_key = "<leader><Tab>", -- Custom switch buffer keymap
