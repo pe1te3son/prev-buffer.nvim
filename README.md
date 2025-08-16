@@ -1,4 +1,4 @@
-# prev-manager.nvim
+# prev-buffer.nvim
 
 A simple Neovim plugin to switch to previous buffer with tab inspired by Spacemacs.
 
@@ -14,15 +14,7 @@ A simple Neovim plugin to switch to previous buffer with tab inspired by Spacema
 ### Using lazy.nvim
 
 ```lua
-return {
-  "pe1te3son/prev-buffer.nvim",
-  version = "*", -- Use latest stable release
-  keys = {
-    { "<leader>bd", desc = "Delete current buffer and switch to previous" },
-    { "<leader><Tab>", desc = "Switch to last previous" },
-  },
-  opts = {},
-}
+return { "pe1te3son/prev-buffer.nvim" }
 ```
 
 ## Configuration
@@ -37,9 +29,8 @@ return {
 ```lua
 return {
   "pe1te3son/prev-buffer.nvim",
-  version = "*", -- Use latest stable release
   opts = {
-    delete_key = "<leader>bd",  -- Custom delete buffer keymap;
+    delete_key = "<leader>bd",  -- Custom delete buffer keymap
     switch_key = "<leader><Tab>", -- Custom switch buffer keymap
   },
 }
@@ -49,9 +40,11 @@ return {
 
 The plugin exposes the following functions:
 
-- `require("prev-manager").delete_current_buffer()` - Delete current buffer and switch to last
-- `require("prev-manager").switch_to_last_buffer()` - Switch to last buffer
-- `require("prev-manager").setup(opts)` - Setup the plugin with options
+- `require("prev-buffer").delete_current_buffer()` - Delete current buffer and switch to last.
+  When deleting a buffer it should always use this function
+  otherwise it will not switch to the last buffer correctly
+- `require("prev-buffer").switch_to_last_buffer()` - Switch to last buffer
+- `require("prev-buffer").setup(opts)` - Setup the plugin with options
 
 ## License
 
