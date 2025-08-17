@@ -19,3 +19,6 @@ jobs:
           files: |
             lua/**
             plugin/**
+        env:
+          GITHUB_TOKEN: ${{ secrets.YOUR_PERSONAL_ACCESS_TOKEN }} 
+          
