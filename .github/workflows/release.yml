@@ -20,5 +20,5 @@ jobs:
             lua/**
             plugin/**
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }} 
+          token: ${{ secrets.RELEASE_TOKEN }} 
           
